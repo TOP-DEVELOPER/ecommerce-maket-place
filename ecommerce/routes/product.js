@@ -38,6 +38,8 @@ router.get("/products", list);
 router.get("/products/search", listSearch);
 router.get("/products/related/:productId", listRelated);
 router.get("/products/categories", listCategories);
+
+// as post as we're sending category and key words to req body
 router.post("/products/by/search", listBySearch);
 router.get("/product/photo/:productId", photo);
 

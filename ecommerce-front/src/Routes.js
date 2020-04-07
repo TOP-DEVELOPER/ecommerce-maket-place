@@ -53,7 +53,7 @@ const Routes = () => {
                     exact
                     component={Profile}
                 />
-                <PrivateRoute
+                <AdminRoute
                     path="/admin/products"
                     exact
                     component={ManageProducts}
