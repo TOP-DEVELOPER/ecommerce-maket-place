@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import { itemTotal } from "./cartHelpers";
+import Search from "./Search";  
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -42,7 +43,7 @@ const Menu = ({ history }) => (
                 >
                     Cart{" "}
                     <sup>
-                        <small className="cart-badge">{itemTotal()}</small>
+                        <small className="">{itemTotal()}</small>
                     </sup>
                 </Link>
             </li>
@@ -108,10 +109,15 @@ const Menu = ({ history }) => (
                     >
                         Signout
                     </span>
-                </li>
+                    
+                </li>                    
             )}
+
+   
         </ul>
     </div>
 );
 
 export default withRouter(Menu);
+
+//

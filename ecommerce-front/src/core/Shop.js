@@ -6,6 +6,7 @@ import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
 
+
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
@@ -101,6 +102,7 @@ const Shop = () => {
             description="Shopping is great"
             className="container-fluid"
         >
+             
             <div className="row">
                 <div className="col-4">
                     <h4>Filter by categories</h4>
