@@ -40,7 +40,7 @@ const Menu = ({ history }) => (
                     className="nav-link"
                     style={isActive(history, "/cart")}
                     to="/cart"
-                >
+                >{itemTotal()}<i class="fas fa-cart-plus"></i>...
                     Cart{" "}
                     <sup>
                         <small className="">{itemTotal()}</small>
