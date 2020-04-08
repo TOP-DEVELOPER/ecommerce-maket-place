@@ -5,7 +5,12 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
+import { isAuthenticated } from "../auth";
 
+
+const {
+    user: {name}
+} = isAuthenticated();
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -99,7 +104,7 @@ const Shop = () => {
     return (
         <Layout
             title="Shop Page"
-            description="Shopping is great"
+            description={` Hello ${name}!`}
             className="container-fluid"
         >
              
