@@ -1,5 +1,5 @@
 const Category = require("../models/category");
-const { errorHandler } = require("../helpers/dbErrorHandler");
+const { errorHandler } = require("../errorHandle/dbErrorHandler");
 
 exports.categoryById = (req, res, next, id) => {
     Category.findById(id).exec((err, category) => {

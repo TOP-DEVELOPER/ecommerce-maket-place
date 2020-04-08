@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const { Order } = require("../models/order");
-const { errorHandler } = require("../helpers/dbErrorHandler");
+const { errorHandler } = require("../errorHandle/dbErrorHandler");
 
 exports.userById = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
