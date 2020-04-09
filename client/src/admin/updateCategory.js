@@ -131,6 +131,4 @@ const UpdateCategory = ({ match }) => {
     );
 };
 
-module.exports = UpdateCategory;
-module.exports = getCategory;
- 
+export default UpdateCategory;

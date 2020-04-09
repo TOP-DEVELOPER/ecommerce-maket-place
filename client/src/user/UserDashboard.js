@@ -100,7 +100,7 @@ const Dashboard = () => {
     return (
         <Layout
             title="Dashboard"
-            description={` Hello ${name}!`}
+            description={`G'day ${name}!`}
             className="container-fluid"
         >
             <div className="row">

@@ -57,7 +57,7 @@ const AddCategory = () => {
 
     const showError = () => {
         if (error) {
-            return <h3 className="text-danger">Category cannot be duplicate</h3>;
+            return <h3 className="text-danger">Category should be unique</h3>;
         }
     };
 
@@ -72,7 +72,7 @@ const AddCategory = () => {
     return (
         <Layout
             title="Add a new category"
-            description={`Hello ${user.name}`}
+            description={`G'day ${user.name}, ready to add a new category?`}
         >
             <div className="row">
                 <div className="col-md-8 offset-md-2">
