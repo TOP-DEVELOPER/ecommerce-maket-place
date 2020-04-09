@@ -106,7 +106,11 @@ const Card = ({
             <div className="card-header name">{product.name}</div>
             <div className="card-body">
                 {shouldRedirect(redirect)}
+
+                <div style={{ height: "18rem"}}
+>
                 <ShowImage item={product} url="product" />
+                </div>                
                 <p className="lead mt-2">
                     {product.description.substring(0, 100)}
                 </p>
