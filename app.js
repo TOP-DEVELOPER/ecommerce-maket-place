@@ -17,9 +17,12 @@ const orderRoutes = require("./routes/order");
 // app
 const app = express();
 
+const port = process.env.PORT || 8001;
+
+
 // db
 mongoose
-    .connect(process.env.database, {
+    .connect(process.env.mongodb_uri, {
         useNewUrlParser: true,
         useCreateIndex: true
     }|| "mongodb://user:password>@ds141188.mlab.com:41188/heroku_vpklbm6m")
@@ -40,7 +43,6 @@ app.use("/api", productRoutes);
 app.use("/api", braintreeRoutes);
 app.use("/api", orderRoutes);
 
-const port = process.env.PORT || 8001;
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
@@ -61,7 +63,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "/client/build/index.html"));
   });
 
-const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`);
