@@ -2,7 +2,6 @@
   "name": "ecommerce-front",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8000/",
   "main": "server.js",
   "dependencies": {
     "braintree-web": "^3.45.0",
