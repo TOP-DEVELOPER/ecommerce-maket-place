@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8000/",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "braintree-web": "^3.45.0",
     "braintree-web-drop-in-react": "^1.0.7",

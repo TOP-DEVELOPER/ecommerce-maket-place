@@ -19,11 +19,8 @@ const app = express();
 
 // db
 mongoose
-    .connect(process.env.DATABASE, {
-        useNewUrlParser: true,
-        useCreateIndex: true
-    })
-    .then(() => console.log("DB Connected"));
+    .connect(process.env.MONGODB_URI || "mongodb://user:password12@ds141188.mlab.com:41188/heroku_vpklbm6m")
+    
 
 // middlewares
 app.use(morgan("dev"));
