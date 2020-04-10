@@ -1,50 +1,47 @@
-const { errorHandler } = require("./helpers/dbErrorHandler");
-const dbConnection = require("./helpers/dbConnection");
-const expressValidator = require("express-validator");
-const express = require("express");
-const morgan = require("morgan");
-require("express-async-errors");
-const path = require("path");
-const cors = require("cors");
-require("dotenv").config();
+const express = require('express');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const expressValidator = require('express-validator');
+require('dotenv').config();
+// import routes
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
+const categoryRoutes = require('./routes/category');
+const productRoutes = require('./routes/product');
+const braintreeRoutes = require('./routes/braintree');
+const orderRoutes = require('./routes/order');
+
+// app
 const app = express();
 
-// Database Connection
-dbConnection();
+// db
+mongoose
+    .connect(process.env.DATABASE, {
+        useNewUrlParser: true,
+        useCreateIndex: true
+    })
+    .then(() => console.log('DB Connected'));
 
-// Middlewares
-app.use(morgan("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// middlewares
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors());
 
-// Routes
-app.use("/api", require("./routes/auth"));
-app.use("/api/user", require("./routes/user"));
-app.use("/api/categories", require("./routes/category"));
-app.use("/api/products", require("./routes/product"));
-app.use("/api/braintree", require("./routes/braintree"));
+// routes middleware
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
+app.use('/api', braintreeRoutes);
+app.use('/api', orderRoutes);
 
-// Error handling middleware
-app.use(function(err, req, res, next) {
-  console.log(err);
-  return res.status(500).json({
-    error: errorHandler(err) || "Something went wrong!"
-  });
-});
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
-
-// Server initialization
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
