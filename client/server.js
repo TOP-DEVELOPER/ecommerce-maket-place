@@ -1,20 +1,20 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+// const express = require('express');
+// const path = require('path');
+// const app = express();
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("build"));
-  }
+// // Serve up static assets (usually on heroku)
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static("build"));
+//   }
   
-  // Send every request to the React app
-  // Define any API routes before this runs
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "build/index.html"));
-  });
+//   // Send every request to the React app
+//   // Define any API routes before this runs
+//   app.get("*", function(req, res) {
+//     res.sendFile(path.join(__dirname, "build/index.html"));
+//   });
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`App is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`App is running on port ${PORT}`);
+// });
