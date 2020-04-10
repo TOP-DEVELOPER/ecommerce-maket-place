@@ -19,11 +19,11 @@ const app = express();
 
 // db
 mongoose
-    .connect(process.env.database, {
+    .connect(process.env.DATABASE, {
         useNewUrlParser: true,
         useCreateIndex: true
-    }|| "mongodb://user:password>@ds141188.mlab.com:41188/heroku_vpklbm6m")
-    
+    } || "mongodb://user:password>@ds141188.mlab.com:41188/heroku_vpklbm6m")
+
 
 // middlewares
 app.use(morgan("dev"));
@@ -40,21 +40,8 @@ app.use("/api", productRoutes);
 app.use("/api", braintreeRoutes);
 app.use("/api", orderRoutes);
 
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  });
-}
-
 const port = process.env.PORT || 8001;
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
