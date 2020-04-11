@@ -46,7 +46,7 @@ app.use('/api', orderRoutes);
 
 const port = process.env.PORT || 8000;
 
-
+app.use(routes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
