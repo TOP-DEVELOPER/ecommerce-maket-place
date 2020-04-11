@@ -1,24 +1,61 @@
-const express = require("express");
+const express = require('express');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const path = require('path');
 
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const expressValidator = require('express-validator');
+require('dotenv').config();
+// import routes
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
+const categoryRoutes = require('./routes/category');
+const productRoutes = require('./routes/product');
+const braintreeRoutes = require('./routes/braintree');
+const orderRoutes = require('./routes/order');
+
+
+// app
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
+// db
+mongoose
+    .connect(process.env.DATABASE, {
+        useNewUrlParser: true,
+        useCreateIndex: true
+    }) 
+    .then(() => console.log('DB Connected'));
+
+// middlewares
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+
+app.use(cookieParser());
+app.use(expressValidator());
+app.use(cors());
+
+// routes middleware
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
+app.use('/api', braintreeRoutes);
+app.use('/api', orderRoutes);
+
+const port = process.env.PORT || 8000;
+
+
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-// Add routes, both API and view
-app.use(routes);
+    app.use(express.static("client/build"));
+  }
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
+  });
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
