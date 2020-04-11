@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const path = require('path');
+
 const expressValidator = require('express-validator');
 require('dotenv').config();
 // import routes
@@ -30,6 +32,7 @@ mongoose
 // middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+
 app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors());
@@ -49,6 +52,10 @@ const port = process.env.PORT || 8000;
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
+
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "build/index.html"));
+  });
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
