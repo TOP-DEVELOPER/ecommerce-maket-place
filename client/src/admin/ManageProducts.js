@@ -45,27 +45,38 @@ const ManageProducts = () => {
                         Total {products.length} products
                     </h2>
                     <hr />
-                    <ul className="list-group">
+
+
+
+                    <div className="container">
                         {products.map((p, i) => (
-                            <li
+                            <div
                                 key={i}
-                                className="list-group-item d-flex justify-content-between align-items-center"
+                                className="row"
                             >
-                                <strong>{p.name}</strong>
-                                <Link to={`/admin/product/update/${p._id}`}>
+                                <strong  className="col-sm" >{p.name}</strong>
+                                <Link to={`/admin/product/update/${p._id}`}className="col-sm">
                                     <span className="badge badge-warning badge-pill">
                                         Update
                                     </span>
                                 </Link>
+
+                                <div className="col-sm">
                                 <span
                                     onClick={() => destroy(p._id)}
-                                    className="badge badge-danger badge-pill"
+                                    className="badge badge-danger badge-pill" 
                                 >
                                     Delete
                                 </span>
-                            </li>
+                                </div>
+                                
+                            </div>
                         ))}
-                    </ul>
+                    </div>
+
+
+
+
                     <br />
                 </div>
             </div>
