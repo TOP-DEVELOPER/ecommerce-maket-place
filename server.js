@@ -24,8 +24,8 @@ const port = process.env.PORT || 8000;
 
 
 // // Define middleware here
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // // Serve up static assets (usually on heroku)
 
 
@@ -42,7 +42,9 @@ const port = process.env.PORT || 8000;
 
 mongoose.connect(process.env.MONGODB_URI || process.env.DATABASE, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
+
 });
 
 // middlewares
