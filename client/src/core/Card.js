@@ -18,7 +18,7 @@ const Card = ({
         return (
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="btn btn-outline-primary mt-2 mb-2">
+                    <button className="badge-pill badge-warning mt-2 mb-2 p-2">
                         View Product
                     </button>
                 </Link>
@@ -43,12 +43,9 @@ const Card = ({
             showAddToCartButton && (
                 <button
                     onClick={addToCart}
-                    className="btn btn-warning mt-2 mb-2"
-                    
+                    className="badge-pill badge-warning mt-2 mb-2 p-2 "                 
                 >
-
-<i class="fas fa-cart-plus"></i>
-                  
+<i class="fas fa-cart-plus"> Add to Cart</i>                  
                 </button>
             )
         );
@@ -69,7 +66,7 @@ const Card = ({
 
     const showStock = quantity => {
         return quantity > 0 ? (
-            <span className="badge badge-dark badge-pill">In Stock</span>
+            <span className="badge badge-dark badge-pill p-2">In Stock</span>
         ) : (
             <span className="badge badge-dark badge-pill">Out of Stock</span>
         );
@@ -141,3 +138,4 @@ const Card = ({
 };
 
 export default Card;
+
