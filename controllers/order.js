@@ -1,3 +1,9 @@
+// require on top
+const sgMail = require('@sendgrid/mail');
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+sgMail.setApiKey('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');
+
 const { Order, CartItem } = require("../models/order");
 const { errorHandler } = require("../controllers/dbErrorHandler");
 
@@ -63,9 +69,8 @@ exports.updateOrderStatus = (req, res) => {
     );
 };
 
-// require on top
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY); 
+
+ 
 // your create order method with email capabilities
 exports.create = (req, res) => {
     console.log('CREATE ORDER: ', req.body);
@@ -149,3 +154,4 @@ exports.create = (req, res) => {
         res.json(data);
     });
 };
+
