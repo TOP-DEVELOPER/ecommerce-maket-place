@@ -143,3 +143,15 @@
     font-size: 1.75rem;
 }
 
+.badge-warning:hover {
+    background-color:#F08804;
+    
+}
+.badge-danger:hover {
+    background-color:rgb(151, 10, 10);
+    
+}
+img:hover {
+    opacity: 0.7;
+    
+}

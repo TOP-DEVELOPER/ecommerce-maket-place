@@ -18,9 +18,9 @@ const Card = ({
         return (
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="badge-pill badge-warning mt-2 mb-2 p-2">
+                    {/* <button className="badge-pill badge-warning mt-2 mb-2 p-2">
                         View Product
-                    </button>
+                    </button> */}
                 </Link>
             )
         );
@@ -56,7 +56,7 @@ const Card = ({
             showRemoveProductButton && (
                 <button
                     onClick={() => removeItem(product._id)}
-                    className="btn btn-outline-danger mt-2 mb-2"
+                    className="badge-pill badge-danger mt-2 mb-2 p-2 px-3"
                 >
                     Remove Product
                 </button>
@@ -107,9 +107,11 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
 
-                <div style={{ height: "18rem"}}
->
-                <ShowImage item={product} url="product" />
+                <div style={{ height: "16rem"}}
+>          
+    <Link to={`/product/${product._id}`} className="mr-2">                    
+                    <ShowImage item={product} url="product" />  
+                </Link>
                 </div>                
                 <p className="lead mt-2">
                     {product.description.substring(0, 100)}
