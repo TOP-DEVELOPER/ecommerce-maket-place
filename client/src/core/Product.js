@@ -39,6 +39,7 @@ const Product = props => {
                 product.description &&
                 product.description.substring(0, 100)
             }
+
             className="container-fluid"
         >
             <div className="row">
