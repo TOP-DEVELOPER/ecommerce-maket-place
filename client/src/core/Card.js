@@ -43,9 +43,12 @@ const Card = ({
             showAddToCartButton && (
                 <button
                     onClick={addToCart}
-                    className="btn btn-outline-warning mt-2 mb-2"
+                    className="btn btn-warning mt-2 mb-2"
+                    
                 >
-                    Add to cart
+
+<i class="fas fa-cart-plus"></i>
+                  
                 </button>
             )
         );
