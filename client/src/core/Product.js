@@ -42,13 +42,13 @@ const Product = props => {
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-8">
+            <div className="col-md-6 offset-md-1">
                     {product && product.description && (
                         <Card product={product} showViewProductButton={false} />
                     )}
                 </div>
 
-                <div className="col-4">
+                <div className="col-md-4 offset-md-1">
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3">
@@ -62,3 +62,16 @@ const Product = props => {
 };
 
 export default Product;
+
+
+/*
+            <div className="row">
+                <div className="col-md-8 offset-md-2">
+                    {showLoading()}
+                    {showSuccess()}
+                    {showError()}
+                    {newPostForm()}
+                </div>
+            </div>
+
+*/
