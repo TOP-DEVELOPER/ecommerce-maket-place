@@ -16,9 +16,14 @@ const Menu = ({ history }) => (
     <div>
         <ul className="nav nav-tabs p-2">    
         <li className="nav-item">
+        <Link
+                    className="nav-link"
+                    style={isActive(history, "/")}
+                    to="/"
+                >
         <img className="logo" src={logofooter} width="10" height="8" alt='LOGO' />
+        </Link>
         </li>
-
 
             <li className="nav-item">
 
