@@ -198,7 +198,9 @@ img.{
 
 .card{
     border-color:transparent;
-    border-top-color: rgb(82, 70, 70);
+    border-top-color: rgb(243, 239, 239);
+    border-width: .25rem;
+
 }
 
 .logo{
