@@ -43,7 +43,7 @@ const Card = ({
             showAddToCartButton && (
                 <button
                     onClick={addToCart}
-                    className="badge-pill badge-warning mt-2 mb-2 p-2 "                 
+                    className="badge-pill badge-warning mx-2 p-1 my-2 "                 
                 >
 <i class="fas fa-cart-plus"> Add to Cart</i>                  
                 </button>
@@ -107,8 +107,7 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
 
-                <div style={{ height: "18rem"}}
->          
+                <div>          
     <Link to={`/product/${product._id}`} className="mr-2">                    
                     <ShowImage item={product} url="product" />  
                 </Link>
