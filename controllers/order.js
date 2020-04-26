@@ -2,7 +2,7 @@
 const sgMail = require('@sendgrid/mail');
 // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const { Order, CartItem } = require("../models/order");
 const { errorHandler } = require("../controllers/dbErrorHandler");
