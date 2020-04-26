@@ -23,38 +23,22 @@
  */
 
 .name {
-    background: teal;
-    color: #fff;
+    
+    color: rgb(63, 61, 61);
     font-weight: bold;
+    background-color: transparent;
 }
 
-/* black shade form 10-1 */
-.black-10 {
-    background: #f2f2f2;
+.name:hover {
+    
+    color:#F08804;
+    font-weight: bolder;
 }
-.black-9 {
-    background: #e6e6e6;
-}
-.black-8 {
-    background: #d9d9d9;
-}
-.black-7 {
-    background: #cccccc;
-}
-.black-6 {
-    background: #bfbfbf;
-}
-.black-5 {
-    background: #b3b3b3;
-}
+
 
 /**
  * product image on card
  */
-
-.product-img {
-    min-height: 100px;
-}
 
 .jumbotron h2 {
     margin-top: -20px;
@@ -117,8 +101,6 @@
     background-color: #232f3e;
 
 }
-
-
 /* 
 .fa-layers-text{
     color:#F08804;
@@ -152,13 +134,33 @@
     
 }
 img:hover {
-    opacity: 0.7;
-    
+    opacity: 0.7;    
 }
-
+/* 
 .img {
     
     width:  100px;
     height: 100px;
     background-size: cover;
+} */
+
+img{
+    width:300px;
+    height:300px; 
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;     
+} 
+
+.card{
+    border-color:transparent;
+    border-top-color: rgb(82, 70, 70);
 }
+
+.logo{
+    height: 45px;
+    width: 100px;
+    border-radius: 50px;
+
+}
+
+

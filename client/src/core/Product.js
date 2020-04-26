@@ -43,7 +43,7 @@ const Product = props => {
             className="container-fluid"
         >
             <div className="row">
-            <div className="col-md-6 offset-md-1">
+            <div className="col-md-6 offset-md-1"  style={{ zoom: "2", marginTop: "0%", padding: 0 }}>
                     {product && product.description && (
                         <Card product={product} showViewProductButton={false} />
                     )}

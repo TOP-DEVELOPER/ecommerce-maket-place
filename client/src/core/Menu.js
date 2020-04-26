@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import { itemTotal } from "./cartHelpers";
+const logofooter = require('../images/logo1.JPG');
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -13,8 +14,14 @@ const isActive = (history, path) => {
 
 const Menu = ({ history }) => (
     <div>
-        <ul className="nav nav-tabs p-2">
+        <ul className="nav nav-tabs p-2">    
+        <li className="nav-item">
+        <img className="logo" src={logofooter} width="10" height="8" alt='LOGO' />
+        </li>
+
+
             <li className="nav-item">
+
                 <Link
                     className="nav-link"
                     style={isActive(history, "/")}

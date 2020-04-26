@@ -103,20 +103,33 @@ const Card = ({
 
     return (
         <div className="card">
-            <div className="card-header name">{product.name}</div>
+            
             <div className="card-body">
                 {shouldRedirect(redirect)}
 
-                <div style={{ height: "16rem"}}
+                <div style={{ height: "18rem"}}
 >          
     <Link to={`/product/${product._id}`} className="mr-2">                    
                     <ShowImage item={product} url="product" />  
                 </Link>
-                </div>                
-                <p className="lead mt-2">
+                </div> 
+
+                    <Link to={`/product/${product._id}`} className="mr-2">                    
+                    <div className="card-header name">{product.name}</div>   
+                </Link>  
+                          
+                <p className="lead">
                     {product.description.substring(0, 100)}
                 </p>
-                <p className="black-10">${product.price}</p>
+            
+            <p className="row ml-3">
+
+                <p  style={{ fontSize: "1rem"}} className="row">$               
+
+                 <div style={{ fontSize: "2rem"}}>{product.price}</div>
+                
+                </p>
+                </p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}
                 </p>
