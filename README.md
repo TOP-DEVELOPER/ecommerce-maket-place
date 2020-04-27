@@ -62,6 +62,14 @@ This template used React, MongoDB, Mongoose ORM, and customized React-Bootstrap 
 * As a Admin, I want to upload a picture of my product so that customer have an eye-view of the product they are going to buy.
 
 
+![demo](/client/src/images/home.png)
+![demo](/client/src/images/signin.png)
+![demo](/client/src/images/shop.png)
+![demo](/client/src/images/checkout.png)
+![demo](/client/src/images/admin.png)
+![demo](/client/src/images/order.png)
+![demo](/client/src/images/product.png)
+
 
 ### ASSIGNMENT CRITERIA
 ✔️ = Done 😊 | ❌ = Not Done 😞 | ❎ = Kinda Done 😑
@@ -112,5 +120,8 @@ Tools and methodologies
 4. ✔️Github. Demonstrate use of frequent commits, pull requests, documentation.
 5. ✔️Use Agile development methodologies.
 6. 😑Provide evidence you have used code quality tools
+
+## Author:
+### Amitabhkumar
 
 
