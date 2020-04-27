@@ -105,7 +105,7 @@ const Shop = () => {
        <div className=""> 
             <div className="row">
                 <div className="col-sm-12 col-md-2 col-lg-3  ">
-                    <h4>Filter by categories</h4>
+                    <h4>Categories</h4>
                     <ul>
                         <Checkbox
                             categories={categories}
@@ -115,7 +115,7 @@ const Shop = () => {
                         />
                     </ul>
 
-                    <h4>Filter by price range</h4>
+                    <h4>Price</h4>
                     <div>
                         <RadioBox
                             prices={prices}
