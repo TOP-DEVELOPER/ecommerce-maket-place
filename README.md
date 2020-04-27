@@ -1,5 +1,4 @@
-![demo](/client/public/images/aks.JPG)
-
+![demo](/client/src/images/logo1.JPG)
 
 Live site found here: www.amitabhkumar.com
 
