@@ -61,6 +61,7 @@ This template used React, MongoDB, Mongoose ORM, and customized React-Bootstrap 
 * As a Admin, I want to see my customer address details so that we can send the product to the right destination.
 * As a Admin, I want to upload a picture of my product so that customer have an eye-view of the product they are going to buy.
 
+### Pages
 
 ![demo](/client/src/images/home.png)
 ![demo](/client/src/images/signin.png)
@@ -69,6 +70,10 @@ This template used React, MongoDB, Mongoose ORM, and customized React-Bootstrap 
 ![demo](/client/src/images/admin.png)
 ![demo](/client/src/images/order.png)
 ![demo](/client/src/images/product.png)
+
+### Wireframe
+
+![demo](/client/src/images/wire.png)
 
 
 ### ASSIGNMENT CRITERIA
