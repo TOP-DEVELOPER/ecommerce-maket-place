@@ -80,7 +80,7 @@ This template used React, MongoDB, Mongoose ORM, and customized React-Bootstrap 
 ✔️ = Done 😊 | ❌ = Not Done 😞 | ❎ = Kinda Done 😑
 #### Setting expectations with your clients
 
-1. ✔️ When approaching your client, be upfront about this being a project you are doing as part of your Diploma.
+1. ✔️ When approaching your client, be upfront about this being a project you are doing as part of the bootcamp graduation.
 2. ✔️ There is to be no expectations on you, the students, to deploy the application for use of the client. Make sure the client is aware of this and is agreed upon.
 3. ✔️ There is to be no confidentiality agreement to be entered into.
 Deliverables
