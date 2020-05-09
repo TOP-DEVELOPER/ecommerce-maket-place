@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/Amitabh-K/e-commerce-market-place.svg)](http://hits.dwyl.com/Amitabh-K/e-commerce-market-place)
+
 ![demo](/client/src/images/logo1.JPG)
 
 Live site found here: www.amitabhkumar.com
