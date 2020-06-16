@@ -2,10 +2,10 @@
 
 ![demo](/client/src/images/logo1.JPG)
 
-Live site found here: www.amitabhkumar.com
+Live site found here: https://amitabh-ecom.herokuapp.com/
 
 eCommerce Marketplace is
-an online marketplace that enables an online retailer to sell products online, accept credit card and paypal payments, view orders and receive email notification of orders placed for further processing. & vice versa for the online customers. See it live at www.amitabhkumar.com
+an online marketplace that enables an online retailer to sell products online, accept credit card and paypal payments, view orders and receive email notification of orders placed for further processing. & vice versa for the online customers. See it live at https://amitabh-ecom.herokuapp.com/
 Technically a 
 MERN Stack E-commerce project: Node JS API (Backend), React JS (Frontend) & powered byMongoDB database.
 JWT Authentication, Digital Ocean's Cloud Servers, Cloudflare  CDN for speed and SSL for security, Braintree Payment Processing, Custom Domain name from Godaddy.com.
