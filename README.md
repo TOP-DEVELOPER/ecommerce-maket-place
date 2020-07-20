@@ -2,6 +2,8 @@
 
 ![demo](/client/src/images/logo1.JPG)
 
+# If the web page does not work need to refresh the page a few times.
+
 
 Live site found here: https://amitabh-ecom.herokuapp.com/
 
