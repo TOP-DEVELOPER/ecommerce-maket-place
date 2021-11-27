@@ -5,7 +5,7 @@
 # If the web page does not work need to refresh the page a few times.
 
 
-Live site found here: http://amitabh.shop/
+Live site found here: https://amitabh-ecom.herokuapp.com/
 
 
 eCommerce Marketplace is
