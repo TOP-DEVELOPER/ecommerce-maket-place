@@ -2,6 +2,8 @@
 
 ![demo](/client/src/images/logo1.JPG)
 
+# Please note this App is deployed on Heoku. This repo is for frontend and the backend is another repo named server11
+
 # If the web page does not work need to refresh the page a few times.
 
 
