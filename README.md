@@ -6,7 +6,8 @@
 
 # If the web page does not work need to refresh the page a few times.
 
-# Wait for the page to load *takes a long time to load*
+# Wait for the page to load
+        **takes a long time to load*
 
 
 Live site found here: https://amitabh-ecom.herokuapp.com/
