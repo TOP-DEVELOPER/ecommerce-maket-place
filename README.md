@@ -1,5 +1,3 @@
-[![HitCount](http://hits.dwyl.com/Amitabh-K/e-commerce-market-place.svg)](http://hits.dwyl.com/Amitabh-K/e-commerce-market-place)
-
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAmitabh-K%2Fe-commerce-market-place&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 ![demo](/client/src/images/logo1.JPG)
