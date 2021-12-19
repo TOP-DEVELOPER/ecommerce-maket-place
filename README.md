@@ -6,6 +6,8 @@
 
 # If the web page does not work need to refresh the page a few times.
 
+# Wait for the page to load *being deployed on Heoku for free and its size tales long time*
+
 
 Live site found here: https://amitabh-ecom.herokuapp.com/
 
