@@ -2,6 +2,26 @@ const User = require("../models/user");
 const { Order } = require("../models/order");
 const { errorHandler } = require("../controllers/dbErrorHandler");
 
+exports.list = (req, res) => {
+    let order = req.query.order ? req.query.order : "asc";
+    let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+    let limit = req.query.limit ? parseInt(req.query.limit) : 6;
+
+    User.find()
+        
+        .populate("products")
+        .sort([[sortBy, order]])
+        .limit(limit)
+        .exec((err, users) => {
+            if (err) {
+                return res.status(400).json({
+                    error: "Users not found"
+                });
+            }
+            res.json(users);
+        });
+};
+
 exports.userById = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
         if (err || !user) {

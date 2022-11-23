@@ -4,6 +4,7 @@ const router = express.Router();
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 
 const {
+    list,
     userById,
     read,
     update,
@@ -15,7 +16,7 @@ router.get("/secret/:userId", requireSignin, isAuth, isAdmin, (req, res) => {
         user: req.profile
     });
 });
-
+router.get('/users',list,isAuth);
 router.get("/user/:userId", requireSignin, isAuth, read);
 router.put("/user/:userId", requireSignin, isAuth, update);
 router.get("/orders/by/user/:userId", requireSignin, isAuth, purchaseHistory);
