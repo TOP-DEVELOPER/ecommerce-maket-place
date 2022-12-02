@@ -6,7 +6,7 @@ import {
     createOrder
 } from "./apiCore";
 import { emptyCart } from "./cartHelpers";
-import Card from "./Card";
+import Cards from "./Card";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import "braintree-web";
@@ -71,7 +71,7 @@ const Checkout = ({ products }) => {
             .then(data => {
                 // console.log(data);
                 nonce = data.nonce;
-                // once you have nonce (card type, card number) send nonce as 'paymentMethodNonce'
+                // once you have nonce (cards type, cards number) send nonce as 'paymentMethodNonce'
                 // and also total to be charged
                 // console.log(
                 //     "send nonce and total to process: ",

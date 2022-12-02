@@ -4,7 +4,7 @@ import ShowImage from "./ShowImage";
 import moment from "moment";
 import { addItem, updateItem, removeItem } from "./cartHelpers";
 
-const Card = ({
+const Cards = ({
     product,
     showViewProductButton = true,
     showAddToCartButton = true,
@@ -43,9 +43,9 @@ const Card = ({
             showAddToCartButton && (
                 <button
                     onClick={addToCart}
-                    className="badge-pill badge-warning mx-2 p-1 my-2 "                 
+                    className="badge-pill badge-warning mx-2 p-1 my-2 "
                 >
-<i class="fas fa-cart-plus"> Add to Cart</i>                  
+                    <i class="fas fa-cart-plus"> Add to Cart</i>
                 </button>
             )
         );
@@ -102,32 +102,32 @@ const Card = ({
     };
 
     return (
-        <div className="card">
-            
+        <div className="card shadow-sm p-3 mb-5 bg-white rounded">
+
             <div className="card-body">
                 {shouldRedirect(redirect)}
 
-                <div>          
-    <Link to={`/product/${product._id}`} className="mr-2">                    
-                    <ShowImage item={product} url="product" />  
-                </Link>
-                </div> 
+                <div>
+                    <Link to={`/product/${product._id}`} className="mr-2">
+                        <ShowImage item={product} url="product" />
+                    </Link>
+                </div>
 
-                    <Link to={`/product/${product._id}`} className="mr-2">                    
-                    <div className="card-header name">{product.name}</div>   
-                </Link>  
-                          
-                <p className="lead">
+                <Link to={`/product/${product._id}`} className="mr-2">
+                    <div className="card-header name">{product.name}</div>
+                </Link>
+
+                <p className="lead" style={{height: "50px"}}>
                     {product.description.substring(0, 100)}
                 </p>
-            
-            <p className="row ml-3">
 
-                <p  style={{ fontSize: "1rem"}} className="row">$               
+                <p className="row ml-3">
 
-                 <div style={{ fontSize: "2rem"}}>{product.price}</div>
-                
-                </p>
+                    <p style={{ fontSize: "1rem" }} className="row">$
+
+                        <div style={{ fontSize: "2rem" }}>{product.price}</div>
+
+                    </p>
                 </p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}
@@ -151,5 +151,5 @@ const Card = ({
     );
 };
 
-export default Card;
+export default Cards;
 

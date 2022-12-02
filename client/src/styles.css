@@ -200,7 +200,13 @@ img.{
     border-color:transparent;
     border-top-color: rgb(243, 239, 239);
     border-width: .25rem;
-
+    
+   }
+.card:hover{
+    border-color:transparent;
+    border-top-color: rgb(238, 206, 206);
+    border-width: .25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 .logo{
@@ -217,6 +223,7 @@ img.{
     font-size: .75rem;
     background-color: transparent;
     padding: 0;
+    height:35px;
 }
 
 .name:hover {

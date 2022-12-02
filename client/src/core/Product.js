@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import { read, listRelated } from "./apiCore";
-import Card from "./Card";
+import Cards from "./Card";
 
 const Product = props => {
     const [product, setProduct] = useState({});
@@ -45,7 +45,7 @@ const Product = props => {
             <div className="row">
             <div className="col-md-6 offset-md-1"  style={{ zoom: "2", marginTop: "0%", padding: 0 }}>
                     {product && product.description && (
-                        <Card product={product} showViewProductButton={false} />
+                        <Cards product={product} showViewProductButton={false} />
                     )}
                 </div>
 
@@ -53,7 +53,7 @@ const Product = props => {
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3">
-                            <Card key={i} product={p} />
+                            <Cards key={i} product={p} />
                         </div>
                     ))}
                 </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
-import Card from "./Card";
+import Cards from "./Card";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
@@ -131,7 +131,7 @@ const Shop = () => {
                     <div className="row">
                         {filteredResults.map((product, i) => (
                             <div key={i} className="col-md-3 mb-3">
-                                <Card product={product} />
+                                <Cards product={product} />
                             </div>
                         ))}
                     </div>
